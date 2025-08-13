@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Therivapeutics LLC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -12,7 +12,6 @@
       padding: 0;
       background-color: #f9f9f9;
       color: #333;
-
     }
     header {
       background-color: #0c4a6e;
@@ -29,14 +28,39 @@
       text-decoration: none;
       color: #0c4a6e;
       font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+    }
+    nav a.active {
+      background-color: #0c4a6e;
+      color: white !important;
     }
     section {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 1rem;
       background: white;
       border-radius: 0.5rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: none; /* hide all sections by default */
+    }
+    section.active {
+      display: block; /* show active section */
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .flex-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      justify-content: center;
+      width: 100%;
     }
     footer {
       text-align: center;
@@ -44,70 +68,357 @@
       font-size: 0.9rem;
       color: #666;
     }
+    .publication {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      gap: 1.5rem;
+    }
+    .publication img {
+      width: 150px;
+      height: 120px;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .pub-content {
+      flex: 1;
+    }
+    .title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .authors {
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .journal {
+      color: #555;
+      margin-bottom: 0.3rem;
+    }
+    .links a {
+      text-decoration: none;
+      margin-right: 1rem;
+      color: #0c4a6e;
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 0.8rem;
+      background-color: #0c4a6e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 150px;
+      align-self: center;
+    }
+    button:hover {
+      background-color: #155e85;
+    }
+    /* Google Scholar & ORCID Links styling */
+    .external-links {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .external-links a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #0c4a6e;
+      font-weight: 600;
+      margin: 0 10px;
+    }
+    .external-links img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
   </style>
 </head>
 <body>
-  <header>
+
+<header>
     <h1>Therivapeutics LLC</h1>
-    <p>R&amp;D Services and Scientific consulting for innovative therapeutic solutions</p>
+    <p>Scientific Consulting & Collaborative Research for the Development of Innovative Therapeutic Solutions</p>
   </header>
+  
+  
 
   <nav>
-    <a href=index.html>About Us</a>
-    <a href=services.html>Services</a>
-	<a href=publications.html>Publications</a>
-    <a href=contact.html>Contact</a>
+    <a href="#" data-section="about" class="">About Us</a>
+    <a href="#" data-section="services" class="active">Services</a>
+    <a href="#" data-section="publications" class="">Publications</a>
+    <a href="#" data-section="contact" class="">Contact</a>
+    <a href="#" data-section="thankyou" class="" style="display:none;">Thank You</a>
   </nav>
 
-
+  <!-- ABOUT SECTION -->
   <section id="about">
     <h2>Mission Statement</h2>
-	 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
-    <div style="flex: 1; min-width: 250px; text-align: justify; line-height: 1.8;">
-    <p>    
-      Research and development of innovative therapeutic solutions, providing scientific services including <i>in silico</i> design, screening, testing, and consulting; collaborating with for-profit and non-profit organizations to accelerate discovery and development in the biotechnology sector.
-    </p>
- </section> 
-
-
-<section id="about">
-  <h2>Meet the founder &amp; CEO - Ravindra Thakkar</h2>
-  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
-    <div style="flex: 1; min-width: 250px; text-align: justify; line-height: 1.8;">
-      <p><strong>Ravindra Thakkar</strong> is the Founder and CEO of <strong>Therivapeutics LLC</strong>, bringing over a decade of experience in exploring the microscopic world of cells, organelles, and biomolecules.</p>
-
-  <p>His work integrates experimental and computational approaches in structural biology, with a focus on computational biomolecular modeling and electron microscopy for therapeutic applications.</p>
-
-  <p>He has investigated cellular changes in disease, designed and patented therapeutic peptides, and collaborated across disciplines to drive biomedical innovation.</p>
-
-  <p>He is passionate about learning new technologies and building partnerships to tackle complex challenges that improve human health and benefit society.</p>
-
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
+      <div style="flex: 1; min-width: 250px; text-align: justify; line-height: 1.8;">
+        <p>    
+          Research and development of innovative therapeutic solutions, providing scientific services including <i>in silico</i> design, screening, testing, and consulting; collaborating with for-profit and non-profit organizations to accelerate discovery and development in the biotechnology sector.
+        </p>
+      </div>
     </div>
-    <div style="flex: 0 0 160px;">
-      <img src="images/ravi.png" alt="Ravi Thakkar" style="width: 230px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+
+    <h2>Meet the founder &amp; CEO </h2>
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
+      <div style="flex: 1; min-width: 250px; text-align: justify; line-height: 1.8;">
+        <p>I am <strong>Ravindra Thakkar, PhD</strong>, the Founder and CEO of <strong>Therivapeutics LLC</strong>, bringing over a decade of experience in structural biology and biomolecular modelling</p>
+
+        <p>My work integrates experimental and computational approaches in structural biology, with a focus on computational biomolecular modeling and electron microscopy for therapeutic applications.
+		   Leveraging my expertise in protein structural biology and structure/function relationships, I have successfully designed  de  novo  therapeutic  peptides  using  Rosetta  and  predicted  their
+		   molecular interactions through molecular docking and MD simulations and free energy calculations using NAMD and Gromacs. Further I have validated protein-protein interactions with their respective 
+		   receptor proteins using Biolayer interferometry (BLI) and cryoEM single particle analysis. Additionally, I have obtained an international patent for a designed cyclic peptide used in cancer 
+		   immunotherapy. This achievement demonstrates my ability to translate scientific research into tangible outcomes with the potential to improve patient lives.  </p>
+		   
+		<p> I am a skilled electron microscopist with specialized expertise in applications across structural biology, clinical pathology, general biological and soft material research including nanomaterial characterization. 
+		    I have extensive experience in studying morphological changes in cells and organelles under various disease states and experimental conditions, as well as in identifying viral and bacterial deposits in animal and 
+			plant tissues under infectious conditions </p>   
+       
+        <p>I am passionate about learning new technologies and building partnerships to tackle complex challenges that improve human health and benefit society.</p>
+      </div>
+      <div style="flex: 0 0 160px;">
+        <img src="images/ravi.png" alt="Ravi Thakkar" style="width: 230px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+      </div>
     </div>
+  </section>
+
+
+
+
+<!-- SERVICES SECTION -->
+<section id="services" class="active">
+
+  <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+
+    <!-- Card 1: Molecular Modeling -->
+
+      
+	  <div style="background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1.5rem; transition: transform 0.2s; width: 700px;">
+        <h3 style="text-align: center; color: #0c4a6e;">Consultation & Services in Molecular Modeling & Computational Biology</h3>
+
+        <div style="text-align: center; margin-top: 1rem;">
+          <img src="images/docking.png" alt="docking" style="width: 370px; border-radius: 8px;" />
+		  <video id="video1" width="300" height="180" autoplay muted loop style="border-radius: 8px;">
+            <source src="images/movie.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+		 <ul style="text-align: left; margin-top: 1rem; list-style-type: circle; color: black; padding-left: 1.5rem;">
+			<li> Molecular docking including post docking analysis (Docking score, RMSD, 2D &amp; 3D interaction plots)</li>
+			<li>Molecular dynamics simulations including post simulation analysis (RMSD, PCA, RMSF, MMGBSA,interatomic-distance) </li>
+			<li>Protein structure prediction and analysis including model validation</li>
+			<li>Binding free energy estimation </li>
+			<li>High-throughput <i>in silico</i> screening</li>
+			<li>ADMET analysis </i>
+		</ul>
+        </div>
+      </div>
+
+
+    <!-- Card 2: Electron Microscopy -->
+
+    <div style="background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1.5rem; transition: transform 0.2s; width: 700px;">
+        <h3 style="text-align: center; color: #0c4a6e;">Consultation & On-site Training in Biological Electron Microscopy</h3>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+		<img src="images/tem.png" alt="TEM" style="width: 250px; border-radius: 8px;" />
+		<img src="images/sem.png" alt="SEM" style="width: 250px; border-radius: 8px;" />
+		</div>
+		 <ul style="text-align: left; margin-top: 1rem; list-style-type: circle; color: black; padding-left: 1.5rem;">
+			<li>Operation of Transmission Electron Microscope (TEM) and Scanning Electron Microscope (SEM) including basic maintainance and calibration.</li>
+			<li>Traditional biological specimen preparation for TEM and SEM analysis.</li>
+			<li>Ultramicrotomy of resin embedded specimens for TEM analysis.</li>						
+		</ul>		
+      </div>
+
   </div>
 </section>
 
-<section id="Contact Us">
-	<h2> Contat Us </h2>
-	<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem;">
-    <div style="flex: 1; min-width: 250px; text-align: justify; line-height: 1.8;">
-        <p>Email: <a href="mailto:info@yourllc.com">therivapeutics@gmail.com</a></p>
-		<p>Location: Bozeman,MT (United States)</p>
+<style>
+  /* Add hover effect for cards */
+  a div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+</style>
+
+ 
+
+  <!-- PUBLICATIONS SECTION -->
+  <section id="publications">
+    <h2>A few selected publications</h2>
+
+    <div class="publication">
+      <a href="https://doi.org/10.1039/D2MD00409G" target="_blank">
+        <img src="images/pub1.png" alt="Publication 1 Thumbnail" />
+      </a>
+      <div class="pub-content">
+        <div class="title">Computational design of a cyclic peptide that inhibits the CTLA4 immune checkpoint</div>
+        <div class="authors"><b>Thakkar, Ravindra</b> and Upreti, Deepa and Ishiguro, Susumu and Tamura, Masaaki and Comer, Jeffrey</div>
+        <div class="journal">RSC Medicinal Chemistry, 2023</div>
+        <div class="links">
+          <a href="https://doi.org/10.1039/D2MD00409G" target="_blank">DOI</a>
+        </div>
+      </div>
     </div>
-</section>
 
+    <div class="publication">
+      <a href="https://doi.org/10.1039/D3MD00222E" target="_blank">
+        <img src="images/pub2.png" alt="Publication 2 Thumbnail" />
+      </a>
+      <div class="pub-content">
+        <div class="title"><i>De novo</i> design of a stapled peptide targeting SARS-CoV2 spike protein receptor-binding domain.</div>
+        <div class="authors"><b>Ravindra Thakkar</b>, Dilip K. Agarwal, Chathuranga B. Ranaweera, Susumu Ishiguro, Martin Conda-Sheridan, Natasha N. Gaudreault, Juergen A. Richt, Masaaki Tamura, and Jeffrey Comer </div>
+        <div class="journal">RSC Medicinal Chemistry, 2023</div>
+        <div class="links">
+          <a href="https://doi.org/10.1039/D3MD00222E" target="_blank">DOI</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="publication">
+      <a href="https://doi.org/10.1080/17435390.2018.1476986" target="_blank">
+        <img src="images/pub3.png" alt="Publication 3 Thumbnail" />
+      </a>
+      <div class="pub-content">
+        <div class="title">Modeling gold nanoparticle biodistribution after arterial infusion into perfused tissue: effects of surface coating, size and protein corona. </div>
+        <div class="authors">Riviere JE, Jaberi-Douraki M, Lillich J, Azizi T, Joo H, Choi K, <b>Thakkar R</b>, Monteiro- Riviere NA.</div>
+        <div class="journal">Nanotoxicology, 2018</div>
+        <div class="links">
+          <a href="https://doi.org/10.1080/17435390.2018.1476986" target="_blank">DOI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <a href="https://doi.org/10.4103/0028-3886.121943" target="_blank">
+        <img src="images/pub4.png" alt="Publication 4 Thumbnail" />
+      </a>
+      <div class="pub-content">
+        <div class="title">Mucolipidosis and progressive myoclonus epilepsy: a distinctive phenotype </div>
+        <div class="authors">MN Ramshekhar N Menon, Sujith Jagtap, <b>Ravindra Thakkar</b>, Gayathri Narayanappa</div>
+        <div class="journal">Neurology India, 2013</div>
+        <div class="links">
+          <a href="https://doi.org/10.4103/0028-3886.121943" target="_blank">DOI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="external-links">
+      <a href="https://scholar.google.com/citations?user=evELZAwAAAAJ&hl=en" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar" />
+        Full list of publications on Google Scholar
+      </a>
+      <a href="https://orcid.org/0000-0002-2541-0802" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg" alt="ORCID" />
+        ORCID Profile
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/therivapeutics@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="url" name="filelink" placeholder="Paste the shareable link to your file (Google Drive, Dropbox, etc.)" />
+
+      <!-- Optional spam protection and redirect -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="#thankyou" />
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- THANK YOU SECTION -->
+  <section id="thankyou">
+    <h2>Thank You!</h2>
+    <p>Your message has been received. We appreciate you reaching out to us.</p>
+    <p>We will get back to you as soon as possible.</p>
+    <p><a href="#" data-section="services" style="color: #0c4a6e; font-weight: 600;">Return to Home</a></p>
+  </section>
 
   <footer>
     <nav>
-    <a href=index.html>About Us</a>
-    <a href=services.html>Services</a>
-	<a href=publications.html>Publications</a>
-    <a href=contact.html>Contact</a>
-  </nav>
+      <a href="#" data-section="about">About Us</a>
+      <a href="#" data-section="services">Services</a>
+      <a href="#" data-section="publications">Publications</a>
+      <a href="#" data-section="contact">Contact</a>
+    </nav>
     <p>&copy; 2025 Therivapeutics LLC. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Get all nav links and sections
+    const navLinks = document.querySelectorAll('nav a[data-section]');
+    const sections = document.querySelectorAll('section');
+
+    function showSection(sectionId) {
+      sections.forEach((sec) => {
+        if (sec.id === sectionId) {
+          sec.classList.add('active');
+        } else {
+          sec.classList.remove('active');
+        }
+      });
+
+      navLinks.forEach((link) => {
+        if (link.dataset.section === sectionId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    // Add click event listeners
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetSection = link.dataset.section;
+        showSection(targetSection);
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // On page load, show Services section by default
+    window.addEventListener('DOMContentLoaded', () => {
+      showSection('services');
+    });
+
+    // Optional: handle hash links to deep link to sections
+    window.addEventListener('hashchange', () => {
+      const hash = location.hash.replace('#', '');
+      if (hash && document.getElementById(hash)) {
+        showSection(hash);
+      }
+    });
+  </script>
+
 </body>
 </html>
