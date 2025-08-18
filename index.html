@@ -152,6 +152,8 @@
       height: 24px;
       margin-right: 8px;
     }
+	
+
   </style>
 </head>
 <body>
@@ -202,70 +204,108 @@
 		    I have extensive experience in studying morphological changes in cells and organelles under various disease states and experimental conditions, as well as in identifying viral and bacterial deposits in animal and 
 			plant tissues under infectious conditions </p>   
        
-        <p>I am passionate about learning new technologies and building partnerships to tackle complex challenges that improve human health and benefit society.</p>
+        <p>I am passionate about building partnerships to tackle complex challenges that improve human health and benefit society and served on collaborative projects with have worked with Sanofi, Altos Lab, Syrna Therapeutics, Charles-River Laboratories and many more.</p>
 		</div>  
-      
+      <div>
+	  <h3> Need more informations, please feel free to email us <a href="mailto:therivapeutics@gmail.com ">therivapeutics@gmail.com </a> </h3> 
+	  
+	  <br>
+	  </div>
     </div>
   </section>
 
 
 
 
-<!-- SERVICES SECTION -->
-<section id="services" class="active">
 
-  <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+ <!-- SERVICES SECTION -->
+ 
+ <section id="services" class="active">
+  <div class="services-container">
 
     <!-- Card 1: Molecular Modeling -->
-
-      
-	  <div style="background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1.5rem; transition: transform 0.2s; width: 700px;">
-        <h3 style="text-align: center; color: #0c4a6e;">Consultation & Services in Molecular Modeling & Computational Biology</h3>
-
-        <div style="text-align: center; margin-top: 1rem;">
-          <img src="images/docking.png" alt="docking" style="width: 370px; border-radius: 8px;" />
-		  <video id="video1" width="300" height="180" autoplay muted loop style="border-radius: 8px;">
-            <source src="images/movie.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-		 <ul style="text-align: left; margin-top: 1rem; list-style-type: circle; color: black; padding-left: 1.5rem;">
-			<li> Molecular docking including post docking analysis (Docking score, RMSD, 2D &amp; 3D interaction plots)</li>
-			<li>Molecular dynamics simulations including post simulation analysis (RMSD, PCA, RMSF, MMGBSA,interatomic-distance) </li>
-			<li>Protein structure prediction and analysis including model validation</li>
-			<li>Binding free energy estimation </li>
-			<li>High-throughput <i>in silico</i> screening</li>
-			<li>ADMET analysis </i>
-		</ul>
-        </div>
+    <div class="card">
+      <h2 style="text-align:center; color: var(--brand);">
+        Consultation &amp; Services in Molecular Modeling &amp; Computational Biology
+      </h2>
+      <div class="media-row">
+        <img src="images/docking.png" alt="docking" />
+        <video id="video1" autoplay muted loop playsinline>
+          <source src="images/movie.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-
+      <ul class="service-list">
+        <li>Molecular docking including post docking analysis (Docking score, RMSD, 2D &amp; 3D interaction plots)</li>
+        <li>Molecular dynamics simulations including post simulation analysis (RMSD, PCA, RMSF, MMGBSA, interatomic-distance)</li>
+        <li>Protein structure prediction and analysis including model validation</li>
+        <li>Binding free energy estimation</li>
+        <li>High-throughput <i>in silico</i> screening</li>
+        <li>ADMET analysis</li>
+      </ul>
+    </div>
 
     <!-- Card 2: Electron Microscopy -->
-
-    <div style="background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 1.5rem; transition: transform 0.2s; width: 700px;">
-        <h3 style="text-align: center; color: #0c4a6e;">Consultation & On-site Training in Biological Electron Microscopy</h3>
-
-        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
-		<img src="images/tem.png" alt="TEM" style="width: 250px; border-radius: 8px;" />
-		<img src="images/sem.png" alt="SEM" style="width: 250px; border-radius: 8px;" />
-		</div>
-		 <ul style="text-align: left; margin-top: 1rem; list-style-type: circle; color: black; padding-left: 1.5rem;">
-			<li>Operation of Transmission Electron Microscope (TEM) and Scanning Electron Microscope (SEM) including basic maintainance and calibration.</li>
-			<li>Traditional biological specimen preparation for TEM and SEM analysis.</li>
-			<li>Ultramicrotomy of resin embedded specimens for TEM analysis.</li>						
-		</ul>		
+    <div class="card">
+      <h2 style="text-align:center; color: var(--brand);">
+        Consultation &amp; On-site Training in Biological Electron Microscopy
+      </h2>
+      <div class="media-row">
+        <img src="images/tem.png" alt="TEM" />
+        <img src="images/sem.png" alt="SEM" />
       </div>
+      <ul class="service-list">
+        <li>Operation of Transmission Electron Microscope (TEM) and Scanning Electron Microscope (SEM) including basic maintenance and calibration.</li>
+        <li>Traditional biological specimen preparation for TEM and SEM analysis.</li>
+        <li>Ultramicrotomy of resin embedded specimens for TEM analysis.</li>
+      </ul>
+    </div>
 
   </div>
 </section>
 
 <style>
-  /* Add hover effect for cards */
-  a div:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
   }
+
+  .media-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .media-row img,
+  .media-row video {
+    max-width: 48%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Responsive: Stack vertically on small screens */
+  @media (max-width: 768px) {
+    .media-row {
+      flex-direction: column;
+    }
+
+    .media-row img,
+    .media-row video {
+      max-width: 100%;
+    }
+  }
+  
+  
 </style>
+
+
+
 
  
 
