@@ -472,21 +472,6 @@
       }
     });
 	
- document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // stop normal submit
-    const form = e.target;
-
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-    }).then(() => {
-      form.style.display = "none"; // hide form
-      document.getElementById("thankyouMessage").style.display = "block"; // show message
-    }).catch(() => {
-      alert("❌ Something went wrong. Please try again.");
-    });
-  });
-
 	    // Check URL for success parameter
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('success') === '1') {
